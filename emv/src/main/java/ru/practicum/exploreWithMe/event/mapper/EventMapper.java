@@ -44,10 +44,9 @@ public class EventMapper {
                 .name(event.getCategory().getName())
                 .build();
 
-        UserShortDto initiator = UserShortDto.builder()
-                .id(event.getInitiator().getId())
-                .name(event.getInitiator().getName())
-                .build();
+        UserShortDto initiator = new UserShortDto(
+                event.getInitiator().getId(),
+                event.getInitiator().getName());
 
         Location location = Location.builder()
                 .lat(event.getLatitude())
@@ -78,10 +77,9 @@ public class EventMapper {
                 .name(event.getCategory().getName())
                 .build();
 
-        UserShortDto initiator = UserShortDto.builder()
-                .id(event.getInitiator().getId())
-                .name(event.getInitiator().getName())
-                .build();
+        UserShortDto initiator = new UserShortDto(
+                event.getInitiator().getId(),
+                event.getInitiator().getName());
 
         return EventShortDto.builder()
                 .id(event.getId())
