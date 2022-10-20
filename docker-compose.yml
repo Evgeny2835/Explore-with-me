@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  stat-db:
+  stats-db:
     image: postgres:14.5-alpine
-    container_name: stat-db
+    container_name: stats-db
     ports:
       - "6545:5432"
     environment:
@@ -10,15 +10,15 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
 
-  stat-server:
+  stats-server:
     build: ./stat
-    container_name: stat-server
+    container_name: stats-server
     ports:
       - "9090:9090"
     depends_on:
-      - stat-db
+      - stats-db
     environment:
-      - DB_HOST=stat-db
+      - DB_HOST=stats-db
       - DB_PORT=5432
       - DB_NAME=stat
       - POSTGRES_USER=root
@@ -41,12 +41,12 @@ services:
       - "8080:8080"
     depends_on:
       - emv-db
-      - stat-server
+      - stats-server
     environment:
       - DB_HOST=emv-db
       - DB_PORT=5432
       - DB_NAME=emv
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
-      - STAT_HOST=stat-server
+      - STAT_HOST=stats-server
       - STAT_PORT=9090
