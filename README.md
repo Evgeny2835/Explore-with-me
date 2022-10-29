@@ -75,6 +75,3 @@ Java, SpringBoot, Lombok, Jackson, Postgresql, Docker, Maven
 * ewm-stats-service-spec.json
 
 Для просмотра файлов требуется любой swagger-редактор
-
-Ссылка на pull request:
-https://github.com/Evgeny2835/Explore-with-me/pull/1
