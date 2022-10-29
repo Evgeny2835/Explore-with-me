@@ -1,15 +1,52 @@
-version: '3.1'
+version: '3.8'
 services:
+  stats-db:
+    image: postgres:14.5-alpine
+    container_name: stats-db
+    ports:
+      - "6545:5432"
+    environment:
+      - POSTGRES_DB=stat
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+
   stats-server:
+    build: ./stat
+    container_name: stats-server
     ports:
       - "9090:9090"
+    depends_on:
+      - stats-db
+    environment:
+      - DB_HOST=stats-db
+      - DB_PORT=5432
+      - DB_NAME=stat
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
 
-  stats-db:
-    image: postgres:14-alpine
+  emv-db:
+    image: postgres:14.5-alpine
+    container_name: emv-db
+    ports:
+      - "6541:5432"
+    environment:
+      - POSTGRES_DB=emv
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
 
-  ewm-service:
+  emv-service:
+    build: ./emv
+    container_name: emv-service
     ports:
       - "8080:8080"
-
-  ewm-db:
-    image: postgres:14-alpine
+    depends_on:
+      - emv-db
+      - stats-server
+    environment:
+      - DB_HOST=emv-db
+      - DB_PORT=5432
+      - DB_NAME=emv
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - STAT_HOST=stats-server
+      - STAT_PORT=9090
