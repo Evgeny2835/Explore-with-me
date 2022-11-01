@@ -71,7 +71,7 @@ Java, SpringBoot, Lombok, Jackson, Postgresql, Docker, Maven
 что запрос успешно прошел аутентификацию и авторизацию
 
 ### Подробная спецификация API описана в файлах, расположенных в корневой папке проекта:
-* ewm-main-service-spec.json
-* ewm-stats-service-spec.json
+* [Основной сервис - ewm-main-service-spec.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/ewm-main-service-spec.json)
+* [Сервис статистики - ewm-stats-service-spec.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/ewm-stats-service-spec.json)
 
-Для просмотра файлов требуется любой swagger-редактор
+Для просмотра файлов используйте редактор, например [Swagger](https://editor-next.swagger.io/)
