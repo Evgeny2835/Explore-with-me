@@ -18,17 +18,20 @@ public class CategoryControllerAdmin {
     private final CategoryServiceAdmin categoryServiceAdmin;
 
     @PostMapping
-    public CategoryDto create(@RequestBody @Valid CategoryNewDto categoryNewDto) {
+    public CategoryDto create(
+            @RequestBody @Valid CategoryNewDto categoryNewDto) {
         return categoryServiceAdmin.create(categoryNewDto);
     }
 
     @PatchMapping
-    public CategoryDto update(@RequestBody @Valid CategoryDto categoryDto) {
+    public CategoryDto update(
+            @RequestBody @Valid CategoryDto categoryDto) {
         return categoryServiceAdmin.update(categoryDto);
     }
 
     @DeleteMapping("/{categoryId}")
-    public void delete(@PathVariable("categoryId") @Positive int categoryId) {
+    public void delete(
+            @PathVariable("categoryId") @Positive int categoryId) {
         categoryServiceAdmin.delete(categoryId);
     }
 }
