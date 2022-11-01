@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS compilations
     title  VARCHAR(255)                         NOT NULL,
     pinned BOOLEAN DEFAULT FALSE                NOT NULL,
     CONSTRAINT pk_compilation_id PRIMARY KEY (id)
-);
+    );
 
 CREATE TABLE IF NOT EXISTS compilations_events
 (
