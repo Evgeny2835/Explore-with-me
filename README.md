@@ -1,7 +1,7 @@
 ## Учебное приложение "Explore with me" на основе микросервисной архитектуры
 
 ### Стек технологий:
-Java, SpringBoot, Lombok, Jackson, Postgresql, Docker, Maven
+Java SE, Spring Boot, Hibernate, PostgreSQL, Maven, Docker, Lombok, Jackson
 
 ### Функциональность
 Предоставляет возможность делиться информацией об интересных событиях и помогать найти компанию для участия в них<br />
