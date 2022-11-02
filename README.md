@@ -28,7 +28,7 @@ Java SE, Spring Boot, Hibernate, PostgreSQL, Maven, Docker, Lombok, Jackson
 
 ### Визуализация результатов работы
 Возможно использовать 2 коллекций тестов Postman (отдельно для каждого сервиса)<br />
-Расположение файлов - папка 'postman' в корневой директории проекта
+Расположение файлов - папка '[postman](https://github.com/Evgeny2835/Explore-with-me/tree/main/postman)' в корневой директории проекта
 
 ### ER диаграмма
 
