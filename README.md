@@ -1,4 +1,4 @@
-## Учебное приложение "Explore with me" на основе микросервисной архитектуры
+## Бэкенд учебного приложения "Explore with me" на основе микросервисной архитектуры
 
 ### Стек технологий:
 Java SE, Spring Boot, Hibernate, PostgreSQL, Maven, Docker, Lombok, Jackson
