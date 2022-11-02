@@ -27,8 +27,9 @@ Java SE, Spring Boot, Hibernate, PostgreSQL, Maven, Docker, Lombok, Jackson
 * emv-service (основной сервис)
 
 ### Визуализация результатов работы
-Возможно использовать 2 коллекций тестов Postman (отдельно для каждого сервиса)<br />
-Расположение файлов - папка '[postman](https://github.com/Evgeny2835/Explore-with-me/tree/main/postman)' в корневой директории проекта
+Коллекции тестов Postman:
+* [основной сервис - ewm-main-service.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/postman/ewm-main-service.json)
+* [сервис статистики - ewm-stat-service.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/postman/ewm-stat-service.json)
 
 ### ER диаграмма
 
@@ -63,9 +64,9 @@ Java SE, Spring Boot, Hibernate, PostgreSQL, Maven, Docker, Lombok, Jackson
 * о количестве обращений пользователей к спискам событий
 * о количестве запросов к подробной информации о событии
 
-### Подробная спецификация API описана в файлах, расположенных в корневой папке проекта:
-* [Основной сервис - ewm-main-service-spec.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/ewm-main-service-spec.json)
-* [Сервис статистики - ewm-stats-service-spec.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/ewm-stats-service-spec.json)
+### Подробная спецификация API:
+* [основной сервис - ewm-main-service-spec.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/ewm-main-service-spec.json)
+* [сервис статистики - ewm-stats-service-spec.json](https://github.com/Evgeny2835/Explore-with-me/blob/main/ewm-stats-service-spec.json)
 
 Для просмотра файлов используйте редактор, например [Swagger](https://editor-next.swagger.io/)
 
